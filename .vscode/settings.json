@@ -1,0 +1,8 @@
+{
+  "editor.fontFamily": "Monaco, 'Courier New', monospace",
+  "editor.fontSize": 13,
+  "editor.tabCompletion": true,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "prettier.eslintIntegration": true
+}
