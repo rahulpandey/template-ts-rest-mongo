@@ -16,15 +16,14 @@ class Server {
     this.routes();
   }
   public config() {
-    const MONOG_URI =
-      "mongodb://rahul:SAving43@demo-shard-00-00-hjmh5.mongodb.net:27017,demo-shard-00-01-hjmh5.mongodb.net:27017,demo-shard-00-02-hjmh5.mongodb.net:27017/test?ssl=true&replicaSet=demo-shard-0&authSource=admin";
+    const MONOG_URI = "mongodb://rk:password@ds125994.mlab.com:25994/test-demo";
     (<any>mongoose).Promise = global.Promise;
     // const options = { mongos: true, useMongoClient: true };
 
     mongoose
       .connect(MONOG_URI || process.env.MONGODB_URI, { useMongoClient: true })
       .then(() => console.log("connected to db"))
-      .catch(err => console.log("Failed to connect db"));
+      .catch(err => console.log(err));
     //mongoose.connect(MONOG_URI || process.env.MONGODB_URI);
     this.app.use(bodyParser.urlencoded({ extended: true }));
     this.app.use(bodyParser.json());
